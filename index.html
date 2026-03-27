@@ -3,74 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Page</title>
+    <title>Toggle Sections</title>
     <style>
-        body {
-            background-color: #f0f0f0;
-            color: #333;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-        .nav-buttons {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .nav-button {
-            background-color: #d3d3d3;
-            border: none;
-            color: #333;
-            margin: 10px;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        .nav-button:hover {
-            background-color: #b0b0b0;
-        }
-        .setup-section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+        .hidden { display: none; }
     </style>
 </head>
 <body>
-<header>
-    <img src="avatar-placeholder.png" alt="Avatar" style="border-radius: 50%; width: 100px; height: 100px;" />
-    <h1>Hi Welcome to my website :] </h1>
-</header>
-<div class="nav-buttons">
-    <button class="nav-button" onclick="location.href='#setup'">My Setup</button>
-    <button class="nav-button" onclick="location.href='#about'">About Me</button>
-    <button class="nav-button" onclick="location.href='#socials'">Socials</button>
-    <button class="nav-button" onclick="location.href='#friends'">My Friends</button>
-    <button class="nav-button" onclick="location.href='#games'">Games</button>
-    <button class="nav-button" onclick="location.href='#updates'">Updates</button>
-    <button class="nav-button" onclick="location.href='#devs'">Devs</button>
-</div>
-<section id="setup" class="setup-section">
-    <h2>My Setup</h2>
-    <ul>
-        <li>Nvidia Geforce RTX3060</li>
-        <li>Intel(R) Core(TM) I5-10400F 2.90GHz</li>
-        <li>Steelseries Rival 5</li>
-        <li>Apex 9 TKL</li>
-        <li>Logitech G935</li>
-        <li>Samsung Essential S3</li>
-        <li>GOODRAM</li>
-        <li>ST200DM008</li>
-        <li>TOSHIBA HDWD110</li>
-        <li>LG 24M38D-B LED</li>
-    </ul>
-</section>
-<!-- Add more sections for About Me, Socials, My Friends, Games, Updates, and Devs -->
+    <button onclick="toggleSection('section1')">Show Section 1</button>
+    <button onclick="toggleSection('section2')">Show Section 2</button>
+    <button onclick="toggleSection('section3')">Show Section 3</button>
+
+    <div id="section1" class="hidden">This is Section 1</div>
+    <div id="section2" class="hidden">This is Section 2</div>
+    <div id="section3" class="hidden">This is Section 3</div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const sections = document.querySelectorAll('div');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
