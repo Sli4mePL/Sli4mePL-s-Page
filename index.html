@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sli4mePL's Portfolio</title>
+    <title>Portfolio Page</title>
     <style>
         body {
             background-color: #f0f0f0;
@@ -14,68 +14,63 @@
             text-align: center;
             padding: 20px;
         }
-        .avatar {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        nav {
+        .nav-buttons {
             display: flex;
             justify-content: center;
             margin: 20px 0;
         }
-        nav button {
-            background-color: #ccc;
+        .nav-button {
+            background-color: #d3d3d3;
             border: none;
-            border-radius: 20px;
+            color: #333;
+            margin: 10px;
             padding: 10px 20px;
-            margin: 0 5px;
             cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
             transition: background-color 0.3s;
         }
-        nav button:hover {
-            background-color: #bbb;
+        .nav-button:hover {
+            background-color: #b0b0b0;
         }
-        .info-box {
-            float: left;
-            width: 25%;
-            background-color: #e0e0e0;
-            padding: 15px;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
-        .content {
-            float: right;
-            width: 70%;
-            text-align: center;
-        }
-        .clear {
-            clear: both;
+        .setup-section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="placeholder-avatar.png" alt="Avatar" class="avatar">
-        <h1>Hi Welcome to my website :)</h1>
-    </header>
-    <nav>
-        <button>My Setup</button>
-        <button>About Me</button>
-        <button>Socials</button>
-        <button>My Friends</button>
-        <button>Games</button>
-        <button>Updates</button>
-        <button>Devs</button>
-    </nav>
-    <div class="info-box">
-        <h3>Updates</h3>
-        <p>Check the Updates!</p>
-    </div>
-    <div class="content">
-        <h2>Welcome to Sli4mePL's Portfolio Page</h2>
-        <p>Here you will find information about my projects, interests, and updates.</p>
-    </div>
-    <div class="clear"></div>
+<header>
+    <img src="avatar-placeholder.png" alt="Avatar" style="border-radius: 50%; width: 100px; height: 100px;" />
+    <h1>Hi Welcome to my website :] </h1>
+</header>
+<div class="nav-buttons">
+    <button class="nav-button" onclick="location.href='#setup'">My Setup</button>
+    <button class="nav-button" onclick="location.href='#about'">About Me</button>
+    <button class="nav-button" onclick="location.href='#socials'">Socials</button>
+    <button class="nav-button" onclick="location.href='#friends'">My Friends</button>
+    <button class="nav-button" onclick="location.href='#games'">Games</button>
+    <button class="nav-button" onclick="location.href='#updates'">Updates</button>
+    <button class="nav-button" onclick="location.href='#devs'">Devs</button>
+</div>
+<section id="setup" class="setup-section">
+    <h2>My Setup</h2>
+    <ul>
+        <li>Nvidia Geforce RTX3060</li>
+        <li>Intel(R) Core(TM) I5-10400F 2.90GHz</li>
+        <li>Steelseries Rival 5</li>
+        <li>Apex 9 TKL</li>
+        <li>Logitech G935</li>
+        <li>Samsung Essential S3</li>
+        <li>GOODRAM</li>
+        <li>ST200DM008</li>
+        <li>TOSHIBA HDWD110</li>
+        <li>LG 24M38D-B LED</li>
+    </ul>
+</section>
+<!-- Add more sections for About Me, Socials, My Friends, Games, Updates, and Devs -->
 </body>
 </html>
